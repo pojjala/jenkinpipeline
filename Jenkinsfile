@@ -4,13 +4,13 @@ pipeline {
         stage('Build') { 
             steps {
                 echo " Build"
-                sh 'python3 Hello.py'
+                sh 'python3 getRandom.py'
             }
         }
         stage('Execute') { 
             steps {
                 echo " test"
-                sh 'python3 Hello.py'
+                sh 'python3 getRandom.py'
             }
         }
         stage('Deploy') { 
