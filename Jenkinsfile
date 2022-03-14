@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo " Build"
 //                 sh 'python3 getRandom.py'
-                sh "mvn clean package"
+//                 sh "mvn clean package"
             }
         }
         
