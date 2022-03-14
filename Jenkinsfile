@@ -14,9 +14,10 @@ pipeline {
                 script{
                     def scannerHome = tool 'sonarscan';
                     withSonarQubeEnv('sonarqube') {
-                        sh "${tool("sonarscan")}/bin/sonar-scanner \
-                        -Dsonar.projectKey=reactapp \
-                        -Dsonar.projectName=reactapp"
+                           sh "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=pojjala_jenkinpipeline"
+//                         sh "${tool("sonarscan")}/bin/sonar-scanner \
+//                         -Dsonar.projectKey=reactapp \
+//                         -Dsonar.projectName=reactapp"
                     }
                 }
             }
